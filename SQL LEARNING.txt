@@ -1,0 +1,10 @@
+SELECT : SELECT name, species FROM family_members;
+SELECT specific columns: SELECT name, species FROM family_members;
+WHERE...equals: SELECT * FROM family_members WHERE species = 'dog';
+WHERE...greater than: SELECT * FROM family_members WHERE num_books_read >190;
+WHERE...greater than or equal: SELECT * FROM family_members where num_books_read >= 180;
+AND : SELECT * FROM friends_of_pickles WHERE height_cm < 45 AND species = 'dog';
+OR : SELECT * FROM friends_of_pickles WHERE height_cm < 45 OR species = 'dog' ;
+IN, NOT IN: SELECT *FROM friends_of_pickles WHERE species NOT IN ( 'cat' , 'dog' ) ;
+DISTINCT: SELECT DISTINCT species FROM friends_of_pickles WHERE height_cm >50 ;
+ORDER BY: SELECT * FROM friends_of_pickles ORDER BY height_cm DESC ; 
