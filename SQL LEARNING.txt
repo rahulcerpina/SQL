@@ -8,3 +8,17 @@ OR : SELECT * FROM friends_of_pickles WHERE height_cm < 45 OR species = 'dog' ;
 IN, NOT IN: SELECT *FROM friends_of_pickles WHERE species NOT IN ( 'cat' , 'dog' ) ;
 DISTINCT: SELECT DISTINCT species FROM friends_of_pickles WHERE height_cm >50 ;
 ORDER BY: SELECT * FROM friends_of_pickles ORDER BY height_cm DESC ; 
+LIMIT # of returened rows: SELECT * FROM friends_of_pickles ORDER BY height_cm DESC LIMIT 1 ;
+COUNT(*): SELECT COUNT(*) FROM friends_of_pickles;
+COUNT(*) WHERE: SELECT COUNT(*) FROM friends_of_pickles WHERE species = 'dog' ;
+SUM: SELECT SUM(num_books_read) FROM family_members ;
+AVG: SELECT AVG(num_books_read) FROM family_members ;
+MAX and MIN: SELECT MAX( num_books_read ) FROM family_members ;
+GROUP BY: SELECT MAX(height_cm), species FROM friends_of_pickles GROUP BY species ;
+NESTED QUERIES: SELECT * FROM family_members WHERE num_books_read = ( SELECT MAX (num_books_read) FROM family_members ) ;
+NULL: SELECT * FROM family_members WHERE favorite_book IS NOT NULL ; 
+Date: SELECT * FROM celebs_born WHERE birthdate > '1980-09-01' ;
+INNER JOINS: SELECT character.name, character_actor.actor_name
+             FROM character
+             INNER JOIN character_actor
+             ON character.id = character_actor.character_id;
