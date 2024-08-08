@@ -1,4 +1,4 @@
-SELECT : SELECT name, species FROM family_members;
+SELECT : SELECT * FROM family_members;
 SELECT specific columns: SELECT name, species FROM family_members;
 WHERE...equals: SELECT * FROM family_members WHERE species = 'dog';
 WHERE...greater than: SELECT * FROM family_members WHERE num_books_read >190;
